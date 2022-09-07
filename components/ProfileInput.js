@@ -4,8 +4,8 @@ import { GitHubIcon } from "../Assets/icons";
 import userInfo from '../fetcher/userInfo';
 
 function ProfileInput({ active,TOKEN }) {
-//   const [isActive, setActive] = useState(active);
-  const [verified, setVerified] = useState(false);
+
+    const [verified, setVerified] = useState(false);
     const [username, setUsername] = useState("");
     const [userData, setUserData] = useState(0);
 
@@ -51,7 +51,7 @@ function ProfileInput({ active,TOKEN }) {
               alt="github profile"
             />
             <h5 className="mb-1 text-xl font-medium text-white ">
-              {userData.name}
+              <a href={userData.html_url}>{userData.name}</a>
             </h5>
             <span className="text-sm text-gray-400">{userData.login}</span>
           </div>
