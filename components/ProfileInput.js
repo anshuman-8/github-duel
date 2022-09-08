@@ -1,10 +1,11 @@
 import React, {useEffect} from "react";
-import { useState } from "react";
+import { useState, useContext } from "react";
 import { GitHubIcon } from "../Assets/icons";
 import userInfo from '../fetcher/userInfo';
+import UserInfoContext from '../context/UserInfo/UserInfoContext';
 
 function ProfileInput({ active,TOKEN }) {
-
+    const {user1,setUser1,setUser2} = useContext(UserInfoContext);
     const [verified, setVerified] = useState(false);
     const [username, setUsername] = useState("");
     const [userData, setUserData] = useState(0);
@@ -12,12 +13,19 @@ function ProfileInput({ active,TOKEN }) {
   const fetchUserData=async (username)=>{
     console.log("username: ", username);
     const data= await userInfo(username,TOKEN);
+    // console.log("data: ",data)
     if(data.statusText==="Not Found"){
         setVerified(false);
+        setUserData();
     }
     else{
         setVerified(true);
         setUserData(data);
+        if(user1===null){
+           await setUser1(data);
+         }else{
+           await setUser2(data);
+         }
     }
   };
 
@@ -31,7 +39,8 @@ function ProfileInput({ active,TOKEN }) {
   }, [username])
 
   return (
-    <div><div className="w-full scale-90 lg:scale-110 max-w-sm bg-gray-800 rounded-lg border border-gray-700 shadow-md py-3 px-4">
+    <div className="mx-6">
+      <div className="w-full scale-90 lg:scale-110 max-w-sm bg-gray-800 rounded-lg border border-gray-700 shadow-md py-3 px-4">
     <div className="flex flex-col items-center pb-10">
       <div>
         {!verified ? (
@@ -47,11 +56,11 @@ function ProfileInput({ active,TOKEN }) {
           <div className="my-4 flex flex-col items-center justify-center">
             <img
               className="mb-3 w-24 h-24 rounded-full shadow-lg"
-              src={userData.avatar_url}
+              src={userData.avatarUrl}
               alt="github profile"
             />
             <h5 className="mb-1 text-xl font-medium text-white ">
-              <a href={userData.html_url}>{userData.name}</a>
+              <a href={`https://github.com/${userData.login}`}>{userData.name}</a>
             </h5>
             <span className="text-sm text-gray-400">{userData.login}</span>
           </div>

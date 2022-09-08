@@ -1,0 +1,49 @@
+{
+  user(login: "yashk2000") {
+    avatarUrl
+    bio
+    location
+    company
+    createdAt
+    email
+    id
+    isCampusExpert
+    login
+    name
+    twitterUsername
+    websiteUrl
+    # repositories(first: 100) {
+    #   totalCount
+    #   nodes {
+    #     stargazerCount
+    #     isFork
+    #     forkCount
+    #     description
+    #     visibility
+    #     name
+    #     updatedAt
+    #     hasIssuesEnabled
+    #     hasWikiEnabled
+    #     url
+    #     codeOfConduct {
+    #       name
+    #     }
+    #     licenseInfo {
+    #       name
+    #     }
+    #     issueTemplates {
+    #       title
+    #     }
+    #   }
+    # }
+    followers {
+      totalCount
+    }
+    pullRequests(first: 100) {
+      totalCount
+    }
+    organizations {
+      totalCount
+    }
+  }
+}
