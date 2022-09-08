@@ -26,6 +26,33 @@ export default async (username, TOKEN) => {
           organizations {
             totalCount
           }
+          repositories(first: 100) {
+            totalCount
+          }
+          # repositories(first: 100) {
+          #   totalCount
+          #   nodes {
+          #     stargazerCount
+          #     isFork
+          #     forkCount
+          #     description
+          #     visibility
+          #     name
+          #     updatedAt
+          #     hasIssuesEnabled
+          #     hasWikiEnabled
+          #     url
+          #     codeOfConduct {
+          #       name
+          #     }
+          #     licenseInfo {
+          #       name
+          #     }
+          #     issueTemplates {
+          #       title
+          #     }
+          #   }
+          # }
         }
       }
     `;
@@ -55,7 +82,7 @@ export default async (username, TOKEN) => {
     return data.user;
 
   } catch (err) {
-    
+
     console.log(err);
     return {
       statusText: "Not Found",

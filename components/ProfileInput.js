@@ -39,7 +39,7 @@ function ProfileInput({ active,TOKEN }) {
   }, [username])
 
   return (
-    <div className="mx-6">
+    <div className="lg:mx-20">
       <div className="w-full scale-90 lg:scale-110 max-w-sm bg-gray-800 rounded-lg border border-gray-700 shadow-md py-3 px-4">
     <div className="flex flex-col items-center pb-10">
       <div>
