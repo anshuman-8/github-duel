@@ -25,7 +25,7 @@ function DuelInput({TOKEN}) {
   };
 
   return (
-    <div className='flex flex-col items-center'>
+    <div className='flex flex-col items-center w-full'>
       <div className='flex flex-col my-10 mx-2 lg:flex-row lg:justify-around lg:items-center'>
         <ProfileInput active={true} TOKEN={TOKEN} />
         <ProfileInput active={true} TOKEN={TOKEN}/>

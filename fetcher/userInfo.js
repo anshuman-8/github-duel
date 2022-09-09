@@ -15,6 +15,7 @@ export default async (username, TOKEN) => {
           email
           id
           isCampusExpert
+          isGitHubStar
           twitterUsername
           websiteUrl
           followers {
@@ -27,6 +28,9 @@ export default async (username, TOKEN) => {
             totalCount
           }
           repositories(first: 100) {
+            totalCount
+          }
+          repositoriesContributedTo {
             totalCount
           }
           # repositories(first: 100) {
@@ -80,9 +84,7 @@ export default async (username, TOKEN) => {
     const data = response.data;
 
     return data.user;
-
   } catch (err) {
-
     console.log(err);
     return {
       statusText: "Not Found",

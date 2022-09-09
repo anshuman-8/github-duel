@@ -7,19 +7,13 @@ export default async (username, TOKEN) => {
         user(login: $username) {
           name
           login
-          avatarUrl
-          repositories(first: 100) {
+          repositories(first: 100 isFork: false ownerAffiliations: OWNER  privacy: PUBLIC) {
             totalCount
             nodes {
               stargazerCount
-              isFork
               forkCount
               description
-              visibility
               name
-              updatedAt
-              hasIssuesEnabled
-              hasWikiEnabled
               url
               codeOfConduct {
                 name
@@ -29,6 +23,12 @@ export default async (username, TOKEN) => {
               }
               issueTemplates {
                 title
+              }
+              pullRequestTemplates {
+                filename
+              }
+              pullRequests {
+                totalCount
               }
             }
           }
