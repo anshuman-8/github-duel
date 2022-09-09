@@ -56,9 +56,8 @@ export default async (username, TOKEN) => {
     });
     // console.log("response: ", response.data);
     // return data.user;
-    const data = response.data;
-
-    return data.user;
+    const data = response.data.user.repositories.nodes;
+    return data;
   } catch (err) {
     console.log(err);
     return {

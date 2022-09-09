@@ -1,4 +1,4 @@
-const repoScore = (repoNodes) => {
+export default (repoNodes) => {
 
   const repoScoreData = {};
 
@@ -13,9 +13,9 @@ const repoScore = (repoNodes) => {
       description,
       codeOfConduct,
       issueTemplates,
-    } = repo;
+    } =  repo;
 
-    const score = stargazerCount * 0.5 + forkCount * 0.5;
+    let score = stargazerCount * 0.5 + forkCount * 0.5;
 
     if (codeOfConduct !== null) score++;
     if (licenseInfo !== null) score++;
@@ -31,5 +31,4 @@ const repoScore = (repoNodes) => {
 
 };
 
-export default repoScore;
-    
+// export default repoScore;

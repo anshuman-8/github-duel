@@ -19,13 +19,13 @@ function ProfileInput({ active,TOKEN }) {
         setUserData();
     }
     else{
-        setVerified(true);
         setUserData(data);
         if(user1===null){
            await setUser1(data);
          }else{
            await setUser2(data);
          }
+         setVerified(true);
     }
   };
 

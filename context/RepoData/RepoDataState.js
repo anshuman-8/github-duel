@@ -15,13 +15,13 @@
      const [userRepo1,setuserRepo1]=useState(null);
      const [userRepo2,setuserRepo2]=useState(null);    
 
-     const resetInfoData=()=>{
+     const resetRepoData=()=>{
         setuserRepo1(null);
         setuserRepo2(null);
      }
 
      return (
-         <RepoDataContext.Provider value = {{userRepo1,setuserRepo1,userRepo2,setuserRepo2,resetInfoData}}>
+         <RepoDataContext.Provider value = {{userRepo1,setuserRepo1,userRepo2,setuserRepo2,resetRepoData}}>
              {children}
          </RepoDataContext.Provider>
          )
