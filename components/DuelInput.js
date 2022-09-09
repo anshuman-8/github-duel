@@ -20,6 +20,7 @@ function DuelInput({TOKEN}) {
     console.log("handleDuel");
     console.log(user1);
     console.log(user2);
+    
     if(user1===null || user2===null){
       alert("Please enter both Usernames");
       return;

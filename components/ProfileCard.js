@@ -13,7 +13,7 @@ function ProfileCard({data}) {
             src={data.avatarUrl}
             alt="Bonnie image"
           />
-          <h5 className="mb-1 text-xl font-medium text-gray-900 dark:text-white">
+          <h5 className="mb-1 text-2xl font-medium text-gray-900 dark:text-white">
             {data.name}
           </h5>
           <span className="text-sm text-gray-300 dark:text-gray-200 my-1">

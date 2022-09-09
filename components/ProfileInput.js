@@ -9,6 +9,7 @@ function ProfileInput({ active,TOKEN }) {
     const [verified, setVerified] = useState(false);
     const [username, setUsername] = useState("");
     const [userData, setUserData] = useState(0);
+    // const [activate2nd, setActivate2nd] = useState(false);
 
   const fetchUserData=async (username)=>{
     console.log("username: ", username);
@@ -34,7 +35,7 @@ function ProfileInput({ active,TOKEN }) {
     //   console.log(username)
       if(username.trim()!=="")fetchUserData(username);
     //   UserInfoFetcher({userId: username})
-    }, 1000)
+    }, 1500)
     return () => clearTimeout(delayDebounceFn)
   }, [username])
 

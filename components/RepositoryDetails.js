@@ -16,12 +16,12 @@ export default function RepositoryDetails({data}) {
 
   const repoCard = (name,score) => {
     return (
-        <div className="flex items-center flex-row justify-between py-3 px-10 ml-4 lg:w-[27rem] dark:scale-110 duration-75 dark:hover:text-white">
+        <div className="flex flex-row justify-between py-3 px-10 ml-4 lg:w-[27rem] rounded-xl duration-75 hover:bg-gray-900">
         <div  className="">
           {name}
         </div>
         <div>
-          {score}
+          {score.toFixed(2)}
         </div>
       </div>
     );
@@ -36,7 +36,6 @@ export default function RepositoryDetails({data}) {
        
         <ul className="overflow-y-auto py-1 h-48 text-gray-700 dark:text-gray-200" >
             {Object.entries(data).map(repoNode  => {
-              console.log("345: ",repoNode[1])
               totalScore+=repoNode[1];
                 return (<>{
                   <li key={repoNode[0]}>
@@ -49,12 +48,12 @@ export default function RepositoryDetails({data}) {
             {/* {repoCard("anshuasfdf",34)}
             {repoCard("anshuasfdf",34.5)}{repoCard("anshuasfdf",45.32)}{repoCard("anshuasfdf",4.45)}{repoCard("anshuasfdf",345)} */}
         </ul>
-            <div  className="flex flex-row justify-between px-10 items-center p-3 text-sm font-medium text-white bg-gray-50 border-t border-gray-200 dark:border-gray-600 hover:bg-gray-100 dark:bg-gray-700 dark:hover:bg-gray-900 ">
-            <div  className="mr-10">
-          Total Score :
+            <div  className="flex flex-row justify-between px-10 items-center p-3 font-medium text-white  border-t  border-gray-600  bg-gray-700 hover:bg-gray-900 ">
+            <div  className="mr-10 tracking-wide ">
+          Total  Repository  Score :
             </div>
         <div>
-          {totalScore}
+          {totalScore.toFixed(2)}
         </div>
             </div >
         </div>
