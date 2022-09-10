@@ -9,7 +9,6 @@ function ProfileInput({ active,TOKEN }) {
     const [verified, setVerified] = useState(false);
     const [username, setUsername] = useState("");
     const [userData, setUserData] = useState(0);
-    // const [activate2nd, setActivate2nd] = useState(false);
 
   const fetchUserData=async (username)=>{
     console.log("username: ", username);

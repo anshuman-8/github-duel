@@ -48,14 +48,12 @@ export default async (username, TOKEN) => {
       },
     });
 
-    // console.log("Client: ", client);
 
     const response = await client.query({
       query: userRepoQuery,
       variables: variables,
     });
-    // console.log("response: ", response.data);
-    // return data.user;
+
     const data = response.data.user.repositories.nodes;
     return data;
   } catch (err) {

@@ -73,17 +73,14 @@ export default async (username, TOKEN) => {
       },
     });
 
-    // console.log("Client: ", client);
-
     const response = await client.query({
       query: userInfoQuery,
       variables: variables,
     });
-    // console.log("response: ", response.data);
-    // return data.user;
+  
     const data = response.data;
-
     return data.user;
+
   } catch (err) {
     console.log(err);
     return {
