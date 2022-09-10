@@ -1,5 +1,4 @@
-import React,{useEffect} from 'react';
-import repoScore from '../functions/repoScore';
+import React from 'react';
 
 export default function RepositoryDetails({data}) {
 
@@ -32,14 +31,13 @@ export default function RepositoryDetails({data}) {
 
               totalScore+=repoNode[1];
 
-                return (<>{
-                  <li key={repoNode[0].toString()+repoNode[1].toString()}>
+                return (<div key={repoNode[0].toString()+repoNode[1].toString()}>
+                  <li >
                   {repoCard(repoNode[0].toString(),repoNode[1])}
                   </li>
-                    }</>
-                   
-                );
-            })};
+                    </div>
+                )
+            })}
 
        </ul>
             <div  className="flex flex-row justify-between px-10 items-center p-3 font-medium text-white  border-t  border-gray-600  bg-gray-700 hover:bg-gray-900 ">

@@ -4,15 +4,15 @@ import { useState, useContext } from "react";
 import ProfileInput from './ProfileInput'
 import DuelInfoCard from "./DuelInfoCard";
 import userRepo from "../fetcher/userRepo";
-import LoadingRing from "../Assets/DoubleRingLoading.gif";
+import EclipseRingLoading from "../Assets/EclipseRingLoading.gif";
 import UserInfoContext from '../context/UserInfo/UserInfoContext';
 import RepoDataContext from '../context/RepoData/RepoDataContext';
 
 
-function DuelInput({TOKEN}) {
+function DuelInput() {
   // const [secActive, setSecActive] = React.useState(false);
   const {user1,user2} = useContext(UserInfoContext);
-  const {userRepo1,setuserRepo1,userRepo2,setuserRepo2} = useContext(RepoDataContext);
+  const {setuserRepo1,setuserRepo2} = useContext(RepoDataContext);
   const [duel,setDuel]=useState(false);
   const [loading,setLoading]=useState(false);
 
@@ -32,9 +32,9 @@ function DuelInput({TOKEN}) {
     }
     setLoading(true);
 
-    const repoUser1=await userRepo(user1.login,TOKEN);
+    const repoUser1=await userRepo(user1.login);
     await setuserRepo1(repoUser1);
-    const repoUser2=await userRepo(user2.login,TOKEN);
+    const repoUser2=await userRepo(user2.login);
     await setuserRepo2(repoUser2);
   
     setDuel(true);
@@ -44,17 +44,19 @@ function DuelInput({TOKEN}) {
 
 
   return (
-    <>{loading?
-      <Image src={LoadingRing} alt="Fetching data..."  width="350px" height="300px"/> 
+    <>{loading?<div className='grid place-items-center h-screen'>
+      <Image src={EclipseRingLoading} alt="Fetching data..."  width="200px" height="200px"/>
+    </div>
+       
     :<div className="">{
 
         duel?<DuelInfoCard/>:
         <div className='flex flex-col items-center w-full'>
           <div className='flex flex-col my-10 mx-2 lg:flex-row lg:justify-around lg:items-center'>
-            <ProfileInput active={true} TOKEN={TOKEN} />
-            <ProfileInput active={true} TOKEN={TOKEN}/>
+            <ProfileInput active={true}  />
+            <ProfileInput active={true} />
           </div>
-          <button className="w-20 font-medium rounded-lg text-sm px-5 py-2.5 my-10 mr-2 mb-2 bg-gray-800 text-white border-gray-300 hover:bg-gray-700 hover:border-gray-600 active:bg-gray-900 ring-1 ring-slate-500" onClick={handleDuel}>
+          <button className="w-20 font-medium rounded-lg text-xl px-5 py-2.5 my-10 mr-2 mb-2 bg-gray-800 text-white border-gray-300 hover:bg-gray-700 hover:border-gray-600 active:bg-gray-900 ring-1 ring-slate-500" onClick={handleDuel}>
             Duel
           </button>
         </div>

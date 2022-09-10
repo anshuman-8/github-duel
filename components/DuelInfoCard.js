@@ -1,5 +1,4 @@
-import React, { useEffect,useContext } from "react";
-import userRepo from "../fetcher/userRepo";
+import React, {useContext } from "react";
 import Image from 'next/image';
 import UserInfoContext from '../context/UserInfo/UserInfoContext';
 import RepoDataContext from '../context/RepoData/RepoDataContext';

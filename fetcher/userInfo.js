@@ -1,6 +1,6 @@
 import { ApolloClient, InMemoryCache, gql } from "@apollo/client";
 
-export default async (username, TOKEN) => {
+export default async (username) => {
   try {
     const userInfoQuery = gql`
       query userInfo($username: String!) {
@@ -69,7 +69,7 @@ export default async (username, TOKEN) => {
       uri: "https://api.github.com/graphql",
       cache: new InMemoryCache(),
       headers: {
-        Authorization: `token ${TOKEN}`,
+        Authorization: `token ${process.env.NEXT_PUBLIC_TOKEN}`,
       },
     });
 

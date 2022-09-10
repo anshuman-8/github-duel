@@ -3,6 +3,7 @@ export default (repoNodes) => {
   const repoScoreData = {};
 
   repoNodes.forEach((repo) => {
+    
     const {
       name,
       stargazerCount,

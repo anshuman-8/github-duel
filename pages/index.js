@@ -5,7 +5,7 @@ import RepoDataState from '../context/RepoData/RepoDataState';
 
 
 
-export default function Home({TOKEN}) {
+export default function Home() {
   return (
     <div className="bg-slate-600 min-h-screen ">
       <Head>
@@ -20,7 +20,7 @@ export default function Home({TOKEN}) {
       GitHub Duel
       </header>
       <main className=''>
-        <DuelInput TOKEN={TOKEN}/>
+        <DuelInput/>
       </main>
 
       <footer className="">
@@ -34,13 +34,14 @@ export default function Home({TOKEN}) {
 
 }
 
-export async function getStaticProps() {
+// export async function getStaticProps() {
 
-  const TOKEN= await (process.env.REACT_APP_TOKEN);
-  return {
-      props : {
-          TOKEN,
-      }
-  }
+//   // const TOKEN= await (process.env.REACT_APP_TOKEN);
+//   const TOKEN= await (process.env.NEXT_PUBLIC_TOKEN);
+//   return {
+//       props : {
+//           TOKEN,
+//       }
+//   }
  
-}
+// }
