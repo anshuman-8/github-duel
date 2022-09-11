@@ -1,7 +1,6 @@
 import { ApolloClient, InMemoryCache, gql } from "@apollo/client";
 
 export default async (username) => {
-  console.log("Token hai?: ", process.env.NEXT_PUBLIC_TOKEN);
   try {
     const userInfoQuery = gql`
       query userInfo($username: String!) {
@@ -45,30 +44,6 @@ export default async (username) => {
               totalContributions
             }
           }
-          # repositories(first: 100) {
-          #   totalCount
-          #   nodes {
-          #     stargazerCount
-          #     isFork
-          #     forkCount
-          #     description
-          #     visibility
-          #     name
-          #     updatedAt
-          #     hasIssuesEnabled
-          #     hasWikiEnabled
-          #     url
-          #     codeOfConduct {
-          #       name
-          #     }
-          #     licenseInfo {
-          #       name
-          #     }
-          #     issueTemplates {
-          #       title
-          #     }
-          #   }
-          # }
         }
       }
     `;
