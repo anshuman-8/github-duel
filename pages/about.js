@@ -8,7 +8,7 @@ function about() {
     <Head>
       <title>GitHub Duel - How Scoring Works </title>
       <meta name="Github Profile comparator" content="Compare GitHub profiles with your friends and know who has a better maintained GitHub profile " />
-      <link rel="icon" href="/github-duel/favicon.ico" />
+      <link rel="icon" href="/favicon.ico" />
     </Head>
     <Link href='/'><a className='hover:underline text-slate-200 mx-10 py-10 text-xl' >Back to Home</a></Link>
     

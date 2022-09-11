@@ -50,7 +50,7 @@ function DuelInput() {
 
 
   return (
-    <>{loading?<div className='grid place-items-center h-screen'>
+    <>{loading?<div className='grid place-items-center h-screen -mt-20'>
       <Image src={EclipseRingLoading} alt="Fetching data..."  width="200px" height="200px"/>
     </div>
        
@@ -61,11 +61,11 @@ function DuelInput() {
           <DuelInfoCard/>
           </div>
           : <div className='flex flex-col items-center w-full'>
-              <div className='flex flex-col my-10 mx-2 lg:flex-row lg:justify-around lg:items-center'>
+              <div className='flex flex-col mt-20 mb-10 mx-2 lg:flex-row lg:justify-around lg:items-center'>
                 <ProfileInput active={true}  />
                 <ProfileInput active={true} />
               </div>
-              <button className="w-20 font-medium rounded-lg text-xl px-5 py-2.5 my-10 mr-2 mb-2 bg-gray-800 text-white border-gray-300 hover:bg-gray-700 hover:border-gray-600 active:bg-gray-900 ring-1 ring-slate-500" onClick={handleDuel}>
+              <button className="w-28 font-medium rounded-lg text-2xl px-5 py-2.5 my-10 mr-2 mb-2 bg-gray-800 text-white border-gray-300 hover:bg-gray-700 hover:border-gray-600 active:bg-gray-900 ring-1 ring-slate-500 shadow-xl" onClick={handleDuel}>
                 Duel
               </button>
             </div>

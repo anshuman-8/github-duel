@@ -4,6 +4,7 @@ import { DuelInput } from '../components'
 import battleSword from '../Assets/images/battleSword.png';
 import UserInfoState from '../context/UserInfo/UserInfoState';
 import RepoDataState from '../context/RepoData/RepoDataState';
+import { GitHubIconBlack } from '../Assets/icons';
 
 
 
@@ -13,16 +14,27 @@ export default function Home() {
       <Head>
         <title>GitHub Duel</title>
         <meta name="Github Profile comparator" content="Compare GitHub profiles with your friends and know who has a better maintained GitHub profile " />
-        <link rel="icon" href="/github-duel/favicon.ico" />
+        <link rel="icon" href="/favicon.ico" />
       </Head>
       
     <UserInfoState>
       <RepoDataState>
-      <header className="text-white py-2 px-4 mb-12 text-4xl text-center flex flex-row justify-center space-x-3">
-      <div className='px-2'>GitHub</div> 
-      <Image src={battleSword} height="20px" width="37px" alt='|'/>
-      <div className='pr-7'>Duel</div>
-      </header>
+
+        <header className='mb-12'>
+         <div className="text-white py-2 px-4 text-4xl text-center flex flex-row justify-center space-x-3">
+          <div className='px-2'>GitHub</div> 
+          <Image src={battleSword} height="20px" width="37px" alt='|'/>
+          <div className='pr-7'>Duel</div>
+         </div>
+        </header>
+
+        <div className=''>
+          <button onClick={()=> window.open("https://github.com/anshuman-8/github-duel", "_blank")} className="mr-5 inline fixed bottom-5 right-5 lg:bottom-10 lg:right-10 cursor-pointer shadow-md hover:shadow-xl hover:scale-110 hover:bg-slate-500 rounded-3xl">
+              <GitHubIconBlack/>
+          </button>
+          
+         </div>
+
       <main className=''>
         <DuelInput/>
       </main>

@@ -8,7 +8,7 @@ function Error404() {
        <Head>
       <title>404 - GitHub Duel </title>
       <meta name="Github Profile comparator" content="Compare GitHub profiles with your friends and know who has a better maintained GitHub profile " />
-      <link rel="icon" href="/github-duel/favicon.ico" />
+      <link rel="icon" href="/favicon.ico" />
     </Head>
       <div className='items-center h-1/2 justify-center flex flex-col'>
         <h1 className='text-7xl'>404</h1>

@@ -11,7 +11,7 @@ import GithubTags from "./GithubTags";
 
 
 function DuelInfoCard() {
-  // const { TOKEN } = props;
+  
   const {user1,user2} = useContext(UserInfoContext);
   const {userRepo1,userRepo2} = useContext(RepoDataContext);
   const repo1data=repoScore(userRepo1);
