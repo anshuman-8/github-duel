@@ -1,6 +1,7 @@
 import { ApolloClient, InMemoryCache, gql } from "@apollo/client";
 
 export default async (username) => {
+  console.log("Token hai?: ", process.env.NEXT_PUBLIC_TOKEN);
   try {
     const userInfoQuery = gql`
       query userInfo($username: String!) {
@@ -15,6 +16,8 @@ export default async (username) => {
           # email
           # id
           isCampusExpert
+          isBountyHunter
+          isDeveloperProgramMember
           isGitHubStar
           twitterUsername
           websiteUrl
@@ -81,6 +84,8 @@ export default async (username) => {
         Authorization: `token ${process.env.NEXT_PUBLIC_TOKEN}`,
       },
     });
+
+    console.log();
 
     const response = await client.query({
       query: userInfoQuery,
