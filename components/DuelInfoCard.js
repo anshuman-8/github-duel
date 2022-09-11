@@ -37,7 +37,7 @@ function DuelInfoCard() {
           <div className={(user1Score>user2Score)?"px-3 text-3xl h-10 rounded-xl bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500":"px-3 text-2xl"}>{user1Score}</div>
           {/* <div className="px-3 ">{(user1Score<user2Score)?"<":">"}</div> */}
           <Image src={battleIcon} alt="|" width="65px" height="65px"/>
-          <div className={(user1Score<user2Score)?"px-3 text-3xl h-10 rounded-xl bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500":"px-3 text-2xl"}>{user2Score}</div>
+          <div className={(user1Score<user2Score)?"px-3 text-3xl h-10 mx-1 rounded-xl bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500":"px-3 text-2xl"}>{user2Score}</div>
         </div>
 
 

@@ -1,6 +1,5 @@
 import React from 'react'
 import Head from 'next/head'
-import {Accordion} from 'flowbite-react';
 import Link from 'next/link'
 
 function about() {

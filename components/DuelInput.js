@@ -57,6 +57,7 @@ function DuelInput() {
     :<div className="">{
         duel?<div>
           <button onClick={anotherDuel} className="px-5 py-3 rounded-md text-white -mt-4 bg-slate-500 hover:bg-slate-700 mx-28 mb-4">Another Duel</button>
+          <></>
           <DuelInfoCard/>
           </div>
           : <div className='flex flex-col items-center w-full'>

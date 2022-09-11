@@ -14,7 +14,7 @@ jobs:
 
     runs-on: ubuntu-latest
     env:
-      TOKEN: ${{secrets.TOKEN}}
+      NEXT_PUBLIC_TOKEN: ${{secrets.NEXT_PUBLIC_TOKEN}}
 
     strategy:
       matrix:

@@ -22,11 +22,11 @@ function ProfileDetails({data}) {
     <div className="divide-y-4 divide-slate-400/25">
       <div className="overflow-y-auto py-1 text-gray-700 lg:text-xl dark:text-gray-200 my-5">
 
-        {dataRow("Contributions", "nal")}
+        {dataRow("Contributions", data.contributionsCollection.contributionCalendar.totalContributions)}
         
-        {dataRow("Pull Request", data.pullRequests.totalCount)}
+        {dataRow("Pull Requests", data.pullRequests.totalCount)}
       
-        {dataRow("Issues", "nal")}
+        {dataRow("Issues", data.contributionsCollection.totalIssueContributions)}
 
         {dataRow("Repository Contributed to", data.repositoriesContributedTo.totalCount)}
 

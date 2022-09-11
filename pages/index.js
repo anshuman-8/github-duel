@@ -20,7 +20,7 @@ export default function Home() {
       <RepoDataState>
       <header className="text-white py-2 px-4 mb-12 text-4xl text-center flex flex-row justify-center space-x-3">
       <div className='px-2'>GitHub</div> 
-      <Image src={battleSword} height="20px" width="35px"/>
+      <Image src={battleSword} height="20px" width="37px" alt='|'/>
       <div className='pr-7'>Duel</div>
       </header>
       <main className=''>

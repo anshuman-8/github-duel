@@ -1,4 +1,5 @@
 import React, {useEffect} from "react";
+import Image from "next/image";
 import userInfo from '../fetcher/userInfo';
 import { useState, useContext } from "react";
 import { GitHubIcon } from "../Assets/icons";
@@ -71,23 +72,27 @@ function ProfileInput({ active}) {
             <label
               htmlFor="base-input"
               className="block mb-2 font-medium text-gray-900 dark:text-gray-300 pt-1"
-            >
+            ><></>
               Enter the GitHub username
             </label>
           </div>
-        ) : (
-          <div className="my-4 flex flex-col items-center justify-center">
-            <img
-              className="mb-3 w-24 h-24 rounded-full shadow-lg"
+        ) : (<>
+          { userDataLoading?<div className="">
+                 {profileSpinner()}
+              </div>:<div className="my-4 flex flex-col items-center justify-center">
+            <Image
+              className="mb-3 rounded-full shadow-lg"
               src={userData.avatarUrl}
               alt="github profile"
+              height="96"
+              width="96"
             />
             <h5 className="mb-1 text-xl font-medium text-white ">
               <a href={`https://github.com/${userData.login}`}>{userData.name}</a>
             </h5>
             <span className="text-sm text-gray-400">{userData.login}</span>
-          </div>
-        )}
+          </div>}
+          </>)}
       </div>
 
       <div className="mb-6">

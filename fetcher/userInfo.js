@@ -10,10 +10,10 @@ export default async (username) => {
           avatarUrl
           bio
           location
-          company
-          createdAt
-          email
-          id
+          # company
+          # createdAt
+          # email
+          # id
           isCampusExpert
           isGitHubStar
           twitterUsername
@@ -32,6 +32,15 @@ export default async (username) => {
           }
           repositoriesContributedTo {
             totalCount
+          }
+          contributionsCollection {
+            # totalCommitContributions
+            totalIssueContributions
+            # totalPullRequestContributions
+            # totalRepositoryContributions
+            contributionCalendar {
+              totalContributions
+            }
           }
           # repositories(first: 100) {
           #   totalCount
@@ -77,10 +86,9 @@ export default async (username) => {
       query: userInfoQuery,
       variables: variables,
     });
-  
+
     const data = response.data;
     return data.user;
-
   } catch (err) {
     console.log(err);
     return {
