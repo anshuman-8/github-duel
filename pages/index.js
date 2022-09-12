@@ -34,7 +34,7 @@ export default function Home() {
           
          </div>
 
-      <main className=''>
+      <main className='text-white'>
         <DuelInput/>
       </main>
 

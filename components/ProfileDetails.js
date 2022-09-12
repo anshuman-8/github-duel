@@ -20,7 +20,7 @@ function ProfileDetails({data}) {
     <div className='hidden lg:block'>
     <div className="text-3xl mt-5 text-slate-100">Profile Details: </div>
     <div className="divide-y-4 divide-slate-400/25">
-      <div className="overflow-y-auto py-1 text-gray-700 lg:text-xl dark:text-gray-200 my-5">
+      <div className="overflow-y-auto py-1 lg:text-xl text-gray-200 my-5">
 
         {dataRow("Contributions", data.contributionsCollection.contributionCalendar.totalContributions)}
         
@@ -34,7 +34,7 @@ function ProfileDetails({data}) {
 
       {/* ------------------------------------------------------- */}
 
-      <div className="overflow-y-auto py-1 h-48 text-gray-700 lg:text-xl dark:text-gray-200 my-5">
+      <div className="overflow-y-auto py-1 h-48 lg:text-xl text-gray-200 my-5">
 
         {dataRow("Followers", data.followers.totalCount)}
 

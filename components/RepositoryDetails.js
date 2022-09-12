@@ -24,7 +24,7 @@ export default function RepositoryDetails({data}) {
 
         <div  className="z-10 lg:w-[30rem] shadow bg-gray-800 border-gray-700 rounded-lg mb-5">
        
-        <ul className="overflow-y-auto py-1 h-48 text-gray-700 dark:text-gray-200" >
+        <ul className="overflow-y-auto py-1 h-48 text-gray-200" >
 
             {Object.entries(data).map(repoNode  => {
 

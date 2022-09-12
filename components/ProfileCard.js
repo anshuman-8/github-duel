@@ -5,7 +5,7 @@ function ProfileCard({data}) {
 
   return (
     <div >
-       <div className="w-full mb-5 mx-auto max-w-sm bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700 px-10 lg:w-[35rem]">
+       <div className="w-full mb-5 mx-auto max-w-sm  rounded-lg border shadow-md bg-gray-800 border-gray-700 px-10 lg:w-[35rem]">
         
         <div className="flex flex-col items-center pb-10">
           <img
@@ -15,12 +15,12 @@ function ProfileCard({data}) {
           <a href={`https://github.com/${data.login}`} className="mb-1 text-2xl font-medium text-white">
             {data.name}
           </a>
-          <span className="text-sm text-gray-300 dark:text-gray-200 my-1">
+          <span className="text-sm text-gray-200 my-1">
             {data.login}
           </span>
-          <span className="text-sm text-gray-500 dark:text-gray-400">
+          <span className="text-sm text-gray-400">
              Location :
-            <span className="text-sm text-gray-300 dark:text-gray-200 mx-1">
+            <span className="text-sm text-gray-200 mx-1">
               {data.location}
             </span>
           </span>

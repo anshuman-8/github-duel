@@ -12,7 +12,7 @@ function about() {
     </Head>
     <div className='h-10'></div>
     <div className=''>
-    <Link href="/" ><a className='hover:bg-slate-800 p-3 ml-10 my-10 text-white top-10 rounded-xl hover:underline bg-slate-700'>Back to Home</a></Link>
+    <Link href="/" ><a className='hover:bg-slate-800 p-3 ml-24 text-white top-10 rounded-xl hover:underline bg-slate-700'>Back to Home</a></Link>
     </div>
 
     <main className='text-white'>
@@ -53,12 +53,12 @@ function about() {
                     </dt>
                     <dd className="mb-16">
                         <p>
-                            Not completely, Yes It does cover a lot of aspects of an user's profile but it is lacks in few aspects like how big are those projects, and projects in private Repositories due to limitations in GitHub API. It is just a start and we are working on improving it.
+                            Not completely, Yes It does cover a lot of aspects of an user&apos;s profile but it is lacks in few aspects like how big are those projects, and projects in private Repositories due to limitations in GitHub API. It is just a start and we are working on improving it.
                         </p>
                         <p>
-                        If you have any suggestions, please feel free to reach out to us on <a href="https://github.com/anshuman-8" target='_blank' className='text-blue-500 hover:underline'>GitHub</a> or <a href="https://twitter.com/Anshuman_8_" target='_blank' className='text-blue-500 hover:underline'>Twitter</a>.
+                        If you have any suggestions, please feel free to reach out to us on <a href="https://github.com/anshuman-8" rel="noopener noreferrer" className='text-blue-500 hover:underline'>GitHub</a> or <a href="https://twitter.com/Anshuman_8_" rel="noopener noreferrer" className='text-blue-500 hover:underline'>Twitter</a>.
                         </p>
-                        <p className='my-5'>Like it? Give it a star 🌟 at <a href='https://github.com/anshuman-8/github-duel' target="_blank" className='text-blue-500 hover:underline'>Repo</a></p>
+                        <p className='my-5'>Like it? Give it a star 🌟 at <a href='https://github.com/anshuman-8/github-duel' rel="noopener noreferrer" className='text-blue-500 hover:underline'>Repo</a></p>
 
                     </dd>
                 </dl>
