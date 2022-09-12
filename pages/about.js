@@ -12,7 +12,7 @@ function about() {
     </Head>
     <div className='h-10'></div>
     <div className=''>
-    <Link href="/" ><a className='hover:bg-slate-800 p-3 ml-24 text-white top-10 rounded-xl hover:underline bg-slate-700'>Back to Home</a></Link>
+    <Link href="/" ><a className='hover:bg-slate-800 p-3 ml-36 text-white top-10 rounded-xl hover:underline bg-slate-700'>Back to Home</a></Link>
     </div>
 
     <main className='text-white'>
@@ -26,18 +26,18 @@ function about() {
                 <dl className="w-full md:w-2/3">
                     <dt className="mb-4">
                         <h3 className="text-xl font-semibold">
-                            How does it Score the Repository?
+                        📁  How does it Score the Repository?
                         </h3>
                     </dt>
                     <dd className="mb-16">
                         <p>
-                            The Repository is scored based on the number of stars(value- 0.3), forks(value- 0.5), pull requests(value- 0.2), and other Community Standards i.e. Code of Conduct template, Licence, Pull Request Templates, Issue Templates where they stand one value each.
+                        The Repository is scored based on the number of stars(value- 0.3), forks(value- 0.5), pull requests(value- 0.2), and other Community Standards i.e. Code of Conduct template, Licence, Pull Request Templates, Issue Templates where they stand one value each.
                         </p>
                     </dd>
 
                     <dt className="mb-4">
                         <h3 className="text-xl font-semibold">
-                        How does it Score the Profile?
+                        👤  How does it Score the Profile?
                         </h3>
                     </dt>
                     <dd className="mb-16">
@@ -48,7 +48,7 @@ function about() {
 
                     <dt className="mb-4">
                         <h3 className="text-xl font-semibold">
-                            Are these the best measures for score?
+                        🤔 Are these the best measures for score?
                         </h3>
                     </dt>
                     <dd className="mb-16">
@@ -58,7 +58,7 @@ function about() {
                         <p>
                         If you have any suggestions, please feel free to reach out to us on <a href="https://github.com/anshuman-8" rel="noopener noreferrer" className='text-blue-500 hover:underline'>GitHub</a> or <a href="https://twitter.com/Anshuman_8_" rel="noopener noreferrer" className='text-blue-500 hover:underline'>Twitter</a>.
                         </p>
-                        <p className='my-5'>Like it? Give it a star 🌟 at <a href='https://github.com/anshuman-8/github-duel' rel="noopener noreferrer" className='text-blue-500 hover:underline'>Repo</a></p>
+                        <p className='my-5 text-lg'>Like it ?  Give it a star 🌟 at <a href='https://github.com/anshuman-8/github-duel' rel="noopener noreferrer" className='text-blue-500 hover:underline'>Github</a></p>
 
                     </dd>
                 </dl>

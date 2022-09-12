@@ -64,7 +64,7 @@ function DuelInput() {
                 <ProfileInput user={1}  />
                 <ProfileInput user={2} />
               </div>
-              <button className="w-28 font-medium rounded-lg text-2xl px-5 py-2.5 my-10 mr-2 mb-2 bg-gray-800 text-white border-gray-300 hover:bg-gray-700 hover:border-gray-600 active:bg-gray-900 ring-1 ring-slate-500 shadow-xl" onClick={handleDuel}>
+              <button className="w-28 font-medium rounded-lg text-2xl px-5 py-2.5 my-1 lg:my-10 mr-2 mb-5 bg-gray-800 text-white border-gray-300 hover:bg-gray-700 hover:border-gray-600 active:bg-gray-900 ring-1 ring-slate-500 shadow-xl" onClick={handleDuel}>
                 Duel
               </button>
               <Link href='/about'><a className='text-blue-600 lg:text-stone-200 hover:text-blue-500 text-lg my-5 lg:my-10 underline'>How does the Scoring works?</a></Link>

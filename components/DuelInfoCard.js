@@ -35,16 +35,16 @@ function DuelInfoCard() {
       <ProfileDetails key="user1info" data={user1} />
       </div>
 
-      <div className='flex flex-col justify-start align-middle'>
-        <div className="text-white text-2xl h-10 pl-24 md:hidden">Total Score</div>
-          <div className="h-40 bg-gray-800 rounded-lg flex flex-row px-10 items-center text-white mb-10 lg:my-10">
-            <div className={(parseFloat(user1Score)>parseFloat(user2Score))?"px-3 text-3xl h-10 rounded-xl bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500":"px-3 text-2xl"}>{user1Score}</div>
+      <div className='flex flex-col justify-start align-middle lg:mx-3'>
+        <div className="text-white text-2xl mt-5 h-10 text-center md:hidden">Total Score</div>
+          <div className="h-40 bg-gray-800 rounded-lg flex flex-row px-10 items-center text-white justify-center mb-10 lg:my-10">
+            <div className={(parseFloat(user1Score)>parseFloat(user2Score))?"px-3 text-3xl h-10 rounded-xl bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500":"px-3 text-3xl"}>{user1Score}</div>
             {/* <div className="px-3 ">{(user1Score<user2Score)?"<":">"}</div> */}
             <Image src={battleIcon} alt="|" width="65px" height="65px"/>
-            <div className={(parseFloat(user1Score)<parseFloat(user2Score))?"px-3 text-3xl h-10 mx-1 rounded-xl bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500":"px-3 text-2xl"}>{user2Score}</div>
+            <div className={(parseFloat(user1Score)<parseFloat(user2Score))?"px-3 text-3xl h-10 mx-1 rounded-xl bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500":"px-3 text-3xl"}>{user2Score}</div>
         </div>
 
-      <Link href='/about'><a className='text-blue-600 lg:text-stone-200 hover:text-blue-500 text-lg lg:my-3 underline'>How does the Scoring works?</a></Link>
+      <Link href='/about'><a className='text-blue-600 lg:text-stone-200 hover:text-blue-500 text-lg text-center lg:my-3 underline'>How does the Scoring works?</a></Link>
       </div>
 
 

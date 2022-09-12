@@ -1,6 +1,7 @@
 # GitHub ⚔️ Duel
 
 
+
 ### Deployed at 🚀: https://githubduel.vercel.app/ 
 
 ## Compare your GitHub profiles with your friends 
@@ -13,9 +14,9 @@ Go checkout the [site](https://githubduel.vercel.app/) and check who wins! 😎
 ---
 ## Want to contribute? 🤔
 
-1. Clone the repository
+1. Fork this repository and then Clone it
 ```bash
-git clone git@github.com:anshuman-8/github-duel.git
+git clone {{repo URL}}
 cd github-duel
 ```
 2. Install all the packages
@@ -23,7 +24,8 @@ cd github-duel
 npm i 
 ```
 3. Set up environment variable for the GitHub API.
-    Get a GitHub access token with with all `repo` and `user` access.
+
+    Get a GitHub Personal access token with scope of all `repo` and `user` access.
     Then set the token in `.env.local` file in root folder as
 ```.env
 NEXT_PUBLIC_TOKEN: <your token>
