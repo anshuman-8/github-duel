@@ -4,7 +4,6 @@ export default function RepositoryDetails({data}) {
 
     let totalScore=0;
 
-
   const repoCard = (name,score) => {
     return (
         <div className="flex flex-row justify-between py-3 px-10 ml-4 lg:w-[27rem] rounded-xl duration-75 hover:bg-gray-900">

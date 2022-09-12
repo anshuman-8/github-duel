@@ -1,11 +1,17 @@
 # GitHub ⚔️ Duel
-----
 
-### Compare your GitHub profiles with your friends
+
+### Deployed at 🚀: https://githubduel.vercel.app/ 
+
+## Compare your GitHub profiles with your friends 
+
+It gives score to GitHub profile based on repositories, contributions, pull request, issues and other factors.
+
+Go checkout the [site](https://githubduel.vercel.app/) and check who wins! 😎
 
 
 ---
-## Want to contribute?
+## Want to contribute? 🤔
 
 1. Clone the repository
 ```bash

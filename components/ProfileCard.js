@@ -12,9 +12,9 @@ function ProfileCard({data}) {
             className="mb-3 mt-3 w-[10rem] h-[10rem] rounded-full shadow-lg"
             src={data.avatarUrl}
             alt="Bonnie image"/>
-          <h5 className="mb-1 text-2xl font-medium text-gray-900 dark:text-white">
+          <a href={`https://github.com/${data.login}`} className="mb-1 text-2xl font-medium text-white">
             {data.name}
-          </h5>
+          </a>
           <span className="text-sm text-gray-300 dark:text-gray-200 my-1">
             {data.login}
           </span>
