@@ -7,7 +7,12 @@ export default async (username) => {
         user(login: $username) {
           name
           login
-          repositories(first: 100 isFork: false ownerAffiliations: OWNER  privacy: PUBLIC) {
+          repositories(
+            first: 100
+            isFork: false
+            ownerAffiliations: OWNER
+            privacy: PUBLIC
+          ) {
             totalCount
             nodes {
               stargazerCount
@@ -30,6 +35,12 @@ export default async (username) => {
               pullRequests {
                 totalCount
               }
+              objectMaster: object(expression: "master:README.md") {
+                id
+              }
+              objectMain: object(expression: "main:README.md") {
+                id
+              }
             }
           }
         }
@@ -47,7 +58,6 @@ export default async (username) => {
         Authorization: `token ${process.env.NEXT_PUBLIC_TOKEN}`,
       },
     });
-
 
     const response = await client.query({
       query: userRepoQuery,

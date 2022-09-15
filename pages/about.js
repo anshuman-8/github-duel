@@ -31,7 +31,7 @@ function about() {
                     </dt>
                     <dd className="mb-16">
                         <p>
-                        The Repository is scored based on the number of stars(value- 0.3), forks(value- 0.5), pull requests(value- 0.2), and other Community Standards i.e. Code of Conduct template, Licence, Pull Request Templates, Issue Templates where they stand one value each.
+                        The Repository is scored based on the number of stars(value- 0.3), forks(value- 0.5), pull requests(value- 0.2), and other Community Standards i.e. Code of Conduct template, Licence, README.md, Pull Request Templates, Issue Templates where they stand one value each.
                         </p>
                     </dd>
 
