@@ -5,7 +5,7 @@ export default (repoData,userData)=>{
     let totalScore=0;
     let repoScore=0;
 
-    Object.entries(repoData).forEach(repoNode=>{
+    repoData.forEach(repoNode=>{
         repoScore+=repoNode[1];
     })
 

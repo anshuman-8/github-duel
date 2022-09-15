@@ -26,7 +26,7 @@ export default function RepositoryDetails({data}) {
        
         <ul className="overflow-y-auto py-1 h-48 text-gray-200" >
 
-            {Object.entries(data).map(repoNode  => {
+            {data.map(repoNode  => {
 
               totalScore+=repoNode[1];
 

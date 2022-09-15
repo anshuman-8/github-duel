@@ -24,7 +24,7 @@ export default (repoNodes) => {
     if (codeOfConduct !== null) score++;
 
     if (licenseInfo !== null) score++;
-    
+
     if (pullRequestTemplates.length !== 0) score++;
 
     if (objectMaster!==null){
@@ -43,8 +43,10 @@ export default (repoNodes) => {
 
     repoScoreData[name] = score;
   });
-
-  return repoScoreData;
+  console.log(repoScoreData);
+  const repoList=Object.entries(repoScoreData).sort((a,b)=>(a[1] > b[1] ? -1 : 1));
+  console.log("List n",repoList)
+  return repoList;
 
 };
 

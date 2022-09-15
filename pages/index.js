@@ -1,4 +1,3 @@
-import Head from 'next/head'
 import Image from 'next/image'
 import { useState } from "react";
 import { DuelInput } from '../components'
@@ -12,11 +11,11 @@ export default function Home() {
   const [alert, setAlert] = useState(true);
   return (
     <div className="bg-slate-600 min-h-screen min-w-screen">
-      <Head>
+      {/* <Head>
         <title>GitHub Duel</title>
         <meta name="Github Profile comparator" content="Compare GitHub profiles with your friends and know who has a better maintained GitHub profile " />
         <link rel="icon" href="favicon.ico" />
-      </Head>
+      </Head> */}
       
     <UserInfoState>
       <RepoDataState>
