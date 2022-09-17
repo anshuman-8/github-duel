@@ -25,7 +25,7 @@ export default (repoData,userData)=>{
 
 
        
-        totalScore=repoScore+(pullReq * 0.5)+(repoContributed * 1)+(followers * 0.3)+(web * 0.2)+(bio * 0.2)+(twitter * 0.2) + (contributions * 0.05) + (issues * 0.1) + (orgs * 0.5) + (isCampusExpert * 2) + (isBountyHunter * 1) + (isDeveloperProgramMember * 1) + (isGitHubStar * 1);  
+        totalScore=repoScore+(pullReq * 0.5)+(repoContributed * 1)+(followers * 0.3)+(web * 0.2)+(bio * 0.2)+(twitter * 0.2) + (contributions * 0.04) + (issues * 0.1) + (orgs * 0.5) + (isCampusExpert * 2) + (isBountyHunter * 1) + (isDeveloperProgramMember * 1) + (isGitHubStar * 1);  
 
     
     return totalScore.toFixed(2);
